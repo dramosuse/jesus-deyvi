@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deyvi Jesús | Ingeniería de Sistemas</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<!-- FONDO TECNOLÓGICO -->
+<canvas id="particles"></canvas>
+
+<div class="grid-background"></div>
+
+<!-- CURSOR -->
+<div class="cursor"></div>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>&lt;</span>DEYVI<span>/&gt;</span>
+    </div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#cv">CV</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">
+        ☰
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            &lt; DEVELOPER /&gt;
+        </p>
+
+        <h1>
+            DEYVI
+            <span>JESÚS</span>
+        </h1>
+
+        <h2>
+            INGENIERÍA DE SISTEMAS
+        </h2>
+
+        <p class="hero-description">
+            Desarrollo soluciones digitales modernas,
+            aplicaciones web y móviles utilizando tecnología,
+            creatividad e innovación.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#proyectos" class="btn primary">
+                VER PROYECTOS
+                <span>→</span>
+            </a>
+
+            <a href="#contacto" class="btn secondary">
+                CONTACTAR
+            </a>
+
+        </div>
+
+        <div class="tech-line">
+
+            <span>PYTHON</span>
+            <span>FLASK</span>
+            <span>ANGULAR</span>
+            <span>IONIC</span>
+            <span>SQL</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+
+        <div class="developer-card">
+
+            <div class="terminal-top">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="code">
+
+                <p>
+                    <span class="purple">const</span>
+                    developer =
+                </p>
+
+                <p class="indent">
+                    {
+                </p>
+
+                <p class="indent">
+                    nombre:
+                    <span class="green">
+                        "Deyvi Jesús"
+                    </span>,
+                </p>
+
+                <p class="indent">
+                    carrera:
+                    <span class="green">
+                        "Ingeniería de Sistemas"
+                    </span>,
+                </p>
+
+                <p class="indent">
+                    passion:
+                    <span class="green">
+                        "Technology"
+                    </span>
+                </p>
+
+                <p class="indent">
+                    }
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SOBRE MI ================= -->
+
+<section class="section about" id="sobre-mi">
+
+    <div class="section-title">
+
+        <span>01</span>
+
+        <h2>
+            SOBRE <strong>MÍ</strong>
+        </h2>
+
+        <div></div>
+
+    </div>
+
+
+    <div class="about-container">
+
+        <div class="profile-wrapper">
+
+            <div class="profile-border">
+
+                <div class="profile-image">
+
+                    <img src="{{ url_for('static', filename='img/deyvi.jpg') }}"
+                         alt="Deyvi Jesús">
+
+                    <div class="image-overlay"></div>
+
+                </div>
+
+            </div>
+
+            <div class="status">
+                <span></span>
+                DISPONIBLE PARA PROYECTOS
+            </div>
+
+        </div>
+
+
+        <div class="about-text">
+
+            <p class="hello">
+                Hola, soy <span>Deyvi Jesús</span>
+            </p>
+
+            <h3>
+                Estudiante de
+                <strong>Ingeniería de Sistemas</strong>
+            </h3>
+
+            <p>
+                Soy estudiante de Ingeniería de Sistemas,
+                interesado en el desarrollo de software,
+                aplicaciones web y móviles y soluciones
+                tecnológicas.
+            </p>
+
+            <p>
+                Me interesa combinar programación,
+                bases de datos, inteligencia de negocios
+                y nuevas tecnologías para desarrollar
+                soluciones útiles y modernas.
+            </p>
+
+            <div class="info-grid">
+
+                <div>
+                    <span>01</span>
+                    <p>Desarrollo Web</p>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <p>Aplicaciones Móviles</p>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <p>Bases de Datos</p>
+                </div>
+
+                <div>
+                    <span>04</span>
+                    <p>Business Intelligence</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HABILIDADES ================= -->
+
+<section class="section skills" id="habilidades">
+
+    <div class="section-title">
+
+        <span>02</span>
+
+        <h2>
+            MIS <strong>HABILIDADES</strong>
+        </h2>
+
+        <div></div>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+        <div class="skill-card">
+
+            <div class="skill-number">
+                01
+            </div>
+
+            <div class="skill-icon">
+                &lt;/&gt;
+            </div>
+
+            <h3>
+                DESARROLLO WEB
+            </h3>
+
+            <p>
+                Creación de interfaces web modernas,
+                responsivas y funcionales.
+            </p>
+
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <div class="skill-number">
+                02
+            </div>
+
+            <div class="skill-icon">
+                PY
+            </div>
+
+            <h3>
+                PYTHON
+            </h3>
+
+            <p>
+                Desarrollo de aplicaciones y soluciones
+                utilizando Python y Flask.
+            </p>
+
+            <div class="tags">
+                <span>Python</span>
+                <span>Flask</span>
+            </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <div class="skill-number">
+                03
+            </div>
+
+            <div class="skill-icon">
+                DB
+            </div>
+
+            <h3>
+                BASES DE DATOS
+            </h3>
+
+            <p>
+                Diseño, consultas y gestión de información
+                utilizando bases de datos.
+            </p>
+
+            <div class="tags">
+                <span>SQL</span>
+                <span>SQL Server</span>
+                <span>MySQL</span>
+            </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <div class="skill-number">
+                04
+            </div>
+
+            <div class="skill-icon">
+                IA
+            </div>
+
+            <h3>
+                TECNOLOGÍA
+            </h3>
+
+            <p>
+                Interés en inteligencia de negocios,
+                Big Data y nuevas tecnologías.
+            </p>
+
+            <div class="tags">
+                <span>Power BI</span>
+                <span>Big Data</span>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROYECTOS ================= -->
+
+<section class="section projects" id="proyectos">
+
+    <div class="section-title">
+
+        <span>03</span>
+
+        <h2>
+            MIS <strong>PROYECTOS</strong>
+        </h2>
+
+        <div></div>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+        <article class="project-card">
+
+            <div class="project-image medical">
+
+                <div class="project-code">
+                    &lt;CLINICA /&gt;
+                </div>
+
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-type">
+                    APLICACIÓN WEB / MÓVIL
+                </span>
+
+                <h3>
+                    Sistema de Gestión de Citas Médicas
+                </h3>
+
+                <p>
+                    Plataforma para gestionar pacientes,
+                    médicos, citas, horarios e información
+                    clínica.
+                </p>
+
+                <div class="project-tags">
+                    <span>Ionic</span>
+                    <span>Angular</span>
+                    <span>SQL</span>
+                </div>
+
+                <a href="#" class="project-link">
+                    VER PROYECTO →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="project-card">
+
+            <div class="project-image vr">
+
+                <div class="project-code">
+                    VR / SYSTEM
+                </div>
+
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-type">
+                    REALIDAD VIRTUAL
+                </span>
+
+                <h3>
+                    Sistema de Realidad Virtual
+                </h3>
+
+                <p>
+                    Proyecto orientado al desarrollo de
+                    experiencias inmersivas utilizando
+                    tecnologías de realidad virtual.
+                </p>
+
+                <div class="project-tags">
+                    <span>Unity</span>
+                    <span>C#</span>
+                    <span>OpenXR</span>
+                </div>
+
+                <a href="#" class="project-link">
+                    VER PROYECTO →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="project-card">
+
+            <div class="project-image bi">
+
+                <div class="project-code">
+                    BI / DATA
+                </div>
+
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-type">
+                    BUSINESS INTELLIGENCE
+                </span>
+
+                <h3>
+                    Sistema de Inteligencia de Negocios
+                </h3>
+
+                <p>
+                    Análisis y visualización de información
+                    para apoyar la toma de decisiones.
+                </p>
+
+                <div class="project-tags">
+                    <span>Power BI</span>
+                    <span>SQL</span>
+                    <span>Python</span>
+                </div>
+
+                <a href="#" class="project-link">
+                    VER PROYECTO →
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= CV ================= -->
+
+<section class="section cv-section" id="cv">
+
+    <div class="section-title">
+
+        <span>04</span>
+
+        <h2>
+            MI <strong>CURRÍCULUM</strong>
+        </h2>
+
+        <div></div>
+
+    </div>
+
+
+    <div class="cv-container">
+
+        <div class="cv-info">
+
+            <span class="cv-label">
+                DOCUMENTO PROFESIONAL
+            </span>
+
+            <h2>
+                CONOCE MÁS
+                <strong>SOBRE MÍ</strong>
+            </h2>
+
+            <p>
+                Puedes consultar mi currículum para
+                conocer mi formación académica,
+                conocimientos y experiencia.
+            </p>
+
+            <div class="cv-buttons">
+
+                <a href="{{ url_for('static', filename='cv/Deyvi_Jesus_CV.pdf') }}"
+                   target="_blank"
+                   class="btn primary">
+                    VER CV →
+                </a>
+
+                <a href="{{ url_for('static', filename='cv/Deyvi_Jesus_CV.pdf') }}"
+                   download
+                   class="btn secondary">
+                    DESCARGAR
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="cv-preview">
+
+            <div class="document">
+
+                <div class="document-line large"></div>
+                <div class="document-line"></div>
+                <div class="document-line"></div>
+
+                <div class="document-box"></div>
+
+                <div class="document-line"></div>
+                <div class="document-line"></div>
+                <div class="document-line short"></div>
+
+            </div>
+
+            <div class="scan-line"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACTO ================= -->
+
+<section class="section contact" id="contacto">
+
+    <div class="section-title">
+
+        <span>05</span>
+
+        <h2>
+            <strong>CONTACTO</strong>
+        </h2>
+
+        <div></div>
+
+    </div>
+
+
+    <div class="contact-container">
+
+        <div>
+
+            <p class="contact-small">
+                ¿TIENES UN PROYECTO?
+            </p>
+
+            <h2>
+                HABLEMOS
+                <span>DE TECNOLOGÍA</span>
+            </h2>
+
+            <p>
+                Estoy interesado en conocer nuevos
+                proyectos y oportunidades relacionadas
+                con tecnología y desarrollo de software.
+            </p>
+
+        </div>
+
+
+        <div class="contact-links">
+
+            <!-- COLOCA AQUÍ TUS ENLACES -->
+
+            <a href="#" target="_blank">
+                <span>GITHUB</span>
+                <strong>→</strong>
+            </a>
+
+            <a href="#" target="_blank">
+                <span>LINKEDIN</span>
+                <strong>→</strong>
+            </a>
+
+            <a href="mailto:dramosvava1@gmail.com">
+                <span>EMAIL</span>
+                <strong>→</strong>
+            </a>
+
+            <a href="#" target="_blank">
+                <span>MI ENLACE</span>
+                <strong>→</strong>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="logo">
+        <span>&lt;</span>DEYVI<span>/&gt;</span>
+    </div>
+
+    <p>
+        © 2026 Deyvi Jesús Ramos Vargas
+    </p>
+
+    <p>
+        Ingeniería de Sistemas
+    </p>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
