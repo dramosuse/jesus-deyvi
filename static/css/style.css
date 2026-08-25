@@ -1241,13 +1241,12 @@ body::selection {
     transform: translateX(5px);
 }
 
-
 /* ================= CV ================= */
 
 .cv-container {
     display: grid;
 
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 420px;
 
     gap: 80px;
 
@@ -1263,7 +1262,14 @@ body::selection {
         );
 
     border: 1px solid var(--border);
+
+    position: relative;
+
+    overflow: hidden;
 }
+
+
+/* ================= INFORMACIÓN ================= */
 
 .cv-label {
     color: var(--green);
@@ -1299,6 +1305,9 @@ body::selection {
     line-height: 1.8;
 }
 
+
+/* ================= BOTONES ================= */
+
 .cv-buttons {
     display: flex;
 
@@ -1307,8 +1316,11 @@ body::selection {
     margin-top: 30px;
 }
 
+
+/* ================= VISTA DEL DOCUMENTO ================= */
+
 .cv-preview {
-    height: 400px;
+    height: 460px;
 
     display: flex;
 
@@ -1317,27 +1329,70 @@ body::selection {
     align-items: center;
 
     position: relative;
+
+    perspective: 1000px;
 }
 
+
+/* DOCUMENTO */
+
 .document {
-    width: 230px;
+    width: 250px;
 
-    height: 320px;
+    height: 350px;
 
-    background: #eee;
+    background: #eeeeee;
 
     padding: 30px;
 
-    transform: rotate(4deg);
+    position: relative;
+
+    transform:
+        rotate(4deg)
+        translateY(0);
 
     box-shadow:
-        20px 20px 50px rgba(0,0,0,.5);
+        20px 25px 50px rgba(0,0,0,.55),
+        0 0 25px rgba(0,255,136,.08);
+
+    animation: documentoFlotando 3.5s ease-in-out infinite;
+
+    transform-origin: center center;
+
+    z-index: 2;
 }
+
+
+/* ANIMACIÓN DEL DOCUMENTO */
+
+@keyframes documentoFlotando {
+
+    0% {
+        transform:
+            rotate(4deg)
+            translateY(18px);
+    }
+
+    50% {
+        transform:
+            rotate(4deg)
+            translateY(-25px);
+    }
+
+    100% {
+        transform:
+            rotate(4deg)
+            translateY(18px);
+    }
+}
+
+
+/* ================= CONTENIDO DEL DOCUMENTO ================= */
 
 .document-line {
     height: 5px;
 
-    background: #aaa;
+    background: #aaaaaa;
 
     margin: 15px 0;
 }
@@ -1353,27 +1408,170 @@ body::selection {
 .document-box {
     height: 90px;
 
-    background: #ccc;
+    background: #cccccc;
 
     margin: 20px 0;
 }
 
+
+/* ================= EFECTO ESCÁNER ================= */
+
 .scan-line {
     position: absolute;
 
-    width: 270px;
+    width: 290px;
 
-    height: 2px;
+    height: 3px;
 
     background: var(--green);
 
     box-shadow:
-        0 0 20px var(--green);
+        0 0 8px var(--green),
+        0 0 20px var(--green),
+        0 0 40px rgba(0,255,136,.5);
 
-    animation: scan 3s ease-in-out infinite;
+    z-index: 5;
+
+    animation: scanDocumento 3s ease-in-out infinite;
 }
 
 
+/* LÍNEA VERDE SUBIENDO Y BAJANDO */
+
+@keyframes scanDocumento {
+
+    0% {
+        top: 18%;
+
+        opacity: .2;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    50% {
+        top: 72%;
+
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 18%;
+
+        opacity: .2;
+    }
+}
+
+
+/* ================= BRILLO DEL DOCUMENTO ================= */
+
+.document::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 0%,
+            rgba(0,255,136,.08) 50%,
+            transparent 100%
+        );
+
+    transform: translateY(-100%);
+
+    animation: luzDocumento 3s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+@keyframes luzDocumento {
+
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: .3;
+    }
+
+    50% {
+        transform: translateY(100%);
+        opacity: .5;
+    }
+
+    70% {
+        opacity: .2;
+    }
+
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .cv-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 50px 30px;
+    }
+
+    .cv-info {
+        text-align: center;
+    }
+
+    .cv-buttons {
+        justify-content: center;
+    }
+
+    .cv-preview {
+        height: 420px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .cv-container {
+        padding: 40px 20px;
+    }
+
+    .cv-info h2 {
+        font-size: 30px;
+    }
+
+    .cv-preview {
+        height: 400px;
+    }
+
+    .document {
+        width: 215px;
+
+        height: 305px;
+    }
+
+    .scan-line {
+        width: 245px;
+    }
+
+    .cv-buttons {
+        flex-direction: column;
+    }
+}
 /* ================= CONTACT ================= */
 
 .contact-container {
