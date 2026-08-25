@@ -1746,8 +1746,150 @@ body::selection {
     }
 }
 
-
 /* ================= PROJECTS ================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    background: #090b0a;
+
+    border: 1px solid rgba(255,255,255,.07);
+
+    overflow: hidden;
+
+    transition: .4s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(0,255,136,.45);
+}
+
+.project-image {
+    height: 230px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,255,136,.15),
+            transparent 60%
+        );
+}
+
+.project-image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 20px;
+
+    border: 1px solid rgba(0,255,136,.15);
+
+    transform: rotate(5deg);
+}
+
+.project-image::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid var(--green);
+
+    border-radius: 50%;
+
+    animation: rotate 8s linear infinite;
+}
+
+.project-code {
+    font-family: "Orbitron", sans-serif;
+
+    color: var(--green);
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    z-index: 2;
+
+    text-shadow:
+        0 0 15px rgba(0,255,136,.6);
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-type {
+    font-family: monospace;
+
+    color: var(--green);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.project-content h3 {
+    font-size: 20px;
+
+    margin: 15px 0;
+
+    line-height: 1.4;
+}
+
+.project-content p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.project-link {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+}
+
+.project-link:hover {
+    color: var(--green);
+
+    transform: translateX(5px);
+}
+
 /* ================= CV ================= */
 
 .cv-container {
