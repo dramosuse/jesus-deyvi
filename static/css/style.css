@@ -1018,7 +1018,6 @@ body::selection {
     position: absolute;
 
     top: -30px;
-
     left: 50%;
 
     transform: translateX(-50%);
@@ -1036,7 +1035,7 @@ body::selection {
 }
 
 
-/* línea decorativa debajo del título */
+/* Línea decorativa */
 
 .skills .section-title::after {
     content: "";
@@ -1044,11 +1043,9 @@ body::selection {
     position: absolute;
 
     width: 180px;
-
     height: 1px;
 
     left: 50%;
-
     bottom: -18px;
 
     transform: translateX(-50%);
@@ -1098,7 +1095,8 @@ body::selection {
 .skills-grid {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:
+        repeat(4, 1fr);
 
     gap: 22px;
 
@@ -1108,7 +1106,7 @@ body::selection {
 }
 
 
-/* ================= TARJETA ================= */
+/* ================= TARJETAS ================= */
 
 .skill-card {
     min-height: 545px;
@@ -1151,7 +1149,7 @@ body::selection {
 }
 
 
-/* borde animado superior */
+/* Línea superior animada */
 
 .skill-card::before {
     content: "";
@@ -1170,11 +1168,15 @@ body::selection {
         0 0 12px var(--green),
         0 0 25px rgba(0,255,136,.4);
 
-    animation: cardLight 3s ease-in-out infinite;
+    animation:
+        cardLight
+        3s
+        ease-in-out
+        infinite;
 }
 
 
-/* borde animado inferior */
+/* Línea inferior */
 
 .skill-card::after {
     content: "";
@@ -1264,7 +1266,7 @@ body::selection {
 }
 
 
-/* ================= VISUAL TECNOLÓGICO ================= */
+/* ================= ICONO / HOLOGRAMA ================= */
 
 .skill-icon {
     width: 190px;
@@ -1293,13 +1295,17 @@ body::selection {
         0 0 12px rgba(0,255,136,.7),
         0 0 30px rgba(0,255,136,.25);
 
-    animation: hologramFloat 4s ease-in-out infinite;
+    animation:
+        hologramFloat
+        4s
+        ease-in-out
+        infinite;
 
     z-index: 2;
 }
 
 
-/* hexágono holográfico */
+/* Contorno hexagonal */
 
 .skill-icon::before {
     content: "";
@@ -1340,7 +1346,7 @@ body::selection {
 }
 
 
-/* segundo contorno */
+/* Base holográfica */
 
 .skill-icon::after {
     content: "";
@@ -1438,6 +1444,7 @@ body::selection {
     pointer-events: none;
 }
 
+
 .skill-card .particle-1 {
     left: 15%;
     top: 38%;
@@ -1448,6 +1455,7 @@ body::selection {
         ease-in-out
         infinite;
 }
+
 
 .skill-card .particle-2 {
     right: 18%;
@@ -1460,6 +1468,7 @@ body::selection {
         infinite;
 }
 
+
 .skill-card .particle-3 {
     left: 30%;
     top: 55%;
@@ -1470,6 +1479,7 @@ body::selection {
         ease-in-out
         infinite;
 }
+
 
 @keyframes particleMove1 {
 
@@ -1491,6 +1501,7 @@ body::selection {
     }
 }
 
+
 @keyframes particleMove2 {
 
     0%,
@@ -1510,6 +1521,7 @@ body::selection {
         opacity: 1;
     }
 }
+
 
 @keyframes particleMove3 {
 
@@ -1551,15 +1563,12 @@ body::selection {
 }
 
 
-/* línea pequeña debajo del título */
-
 .skill-card h3::after {
     content: "";
 
     display: block;
 
     width: 45px;
-
     height: 2px;
 
     margin: 12px auto 0;
@@ -1612,6 +1621,7 @@ body::selection {
     margin-top: 10px;
 }
 
+
 .tags span {
     font-size: 9px;
 
@@ -1631,6 +1641,7 @@ body::selection {
     transition: .3s;
 }
 
+
 .tags span:hover {
     color: #000;
 
@@ -1647,11 +1658,9 @@ body::selection {
     position: absolute;
 
     left: -20%;
-
     bottom: -5px;
 
     width: 140%;
-
     height: 65px;
 
     opacity: .65;
@@ -1737,6 +1746,8 @@ body::selection {
     }
 }
 
+
+/* ================= PROJECTS ================= */
 /* ================= CV ================= */
 
 .cv-container {
